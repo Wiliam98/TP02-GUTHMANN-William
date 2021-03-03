@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
 
+  public valid1 : boolean = false;
+
   constructor() { }
 
   click() {
