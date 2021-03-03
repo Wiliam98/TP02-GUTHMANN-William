@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Client } from '../client';
 
 @Component({
   selector: 'app-recap',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecapComponent implements OnInit {
 
+  @Input () client : Client = new Client();
   constructor() { }
 
   ngOnInit(): void {

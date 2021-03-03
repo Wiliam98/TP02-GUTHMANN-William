@@ -14,7 +14,7 @@ export class FormulaireComponent implements OnInit {
   identifiant : string = "toto";
   password : string = "";
   confirm_password : string = "";
-  client : Client = new Client;
+  client : Client = new Client();
 
   constructor() { }
 

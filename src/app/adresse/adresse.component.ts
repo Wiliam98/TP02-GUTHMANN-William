@@ -15,7 +15,7 @@ export class AdresseComponent implements OnInit {
   @Input () pays : string = "France";
   @Input () phone : string = "06XXXXXXXX";
   @Input () mail : string = "jeand.dupont@yahoo.fr";
-  client : Client = new Client;
+  @Input () client : Client = new Client();
 
   
   constructor() { }

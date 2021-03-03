@@ -1,5 +1,5 @@
 <div *ngIf="register"> 
-    <app-adresse></app-adresse>
+    <app-adresse [client]="client"></app-adresse>
 </div>
 
 <h5>Composant formulaire</h5>
@@ -22,5 +22,5 @@
 </div>
 
 <div *ngIf="afficherRecapitulatif"> Récapitulatif  :
-    <app-recap></app-recap>
+    <app-recap [client]="client"></app-recap>
 </div>
