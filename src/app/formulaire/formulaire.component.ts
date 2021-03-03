@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import '~bootstrap/dist/css/bootstrap.min.css';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
 
-  public valid1 : boolean = false;
+  valid1 : boolean = false;
+  prenom : string = "toto";
 
   constructor() { }
 

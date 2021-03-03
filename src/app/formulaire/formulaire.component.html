@@ -1,3 +1,8 @@
 <p>Formulaire de saisie</p>
-<button>Test</button>
+<br/>
+Prénom : {{prenom}}
+<input [(ngModel)]="prenom"/>
+
+
+<app-adresse [prenom]="prenom"></app-adresse>
 <button [disabled]="!valid1" (click)="click()">Enregistrer</button>
