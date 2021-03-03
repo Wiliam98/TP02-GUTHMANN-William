@@ -1,2 +1,20 @@
-<p>Composant adresse</p><br/>
-{{prenom}}
+<h5>Composant adresse</h5>
+<div>Nom : 
+<input type="text" placeholder={{nom}} [(ngModel)]="nom" (change)="verifyFields()"/></div> 
+<div>Prénom : 
+<input type="text" placeholder={{prenom}}  [(ngModel)]="prenom" (change)="verifyFields()"/></div> 
+<div>Adresse :
+<input type="text" placeholder={{adresse}}  [(ngModel)]="adresse" (change)="verifyFields()"/></div>  
+<div>CP : 
+<input type="number" placeholder={{postal}}  [(ngModel)]="postal" (change)="verifyFields()"/></div> 
+<div>Pays : 
+<input type="text" placeholder={{pays}}  [(ngModel)]="pays" (change)="verifyFields()"/></div> 
+<div>Tél : 
+<input type="text" placeholder={{phone}}  [(ngModel)]="phone" (change)="verifyFields()"/></div> 
+<div>E-mail : 
+<input type="mail" placeholder={{mail}}  [(ngModel)]="mail" (change)="verifyFields()"/></div> 
+<div>Civilité :
+    <div><input type="radio" name="civilite" value="M"/>M</div>
+    <div><input type="radio" name="civilite" value="F"/>F</div>
+    <div><input type="radio" name="civilite" value="Autre" checked/>Autre</div>
+</div><br/>

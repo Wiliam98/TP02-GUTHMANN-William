@@ -1,8 +1,26 @@
-<p>Formulaire de saisie</p>
-<br/>
-Prénom : {{prenom}}
-<input [(ngModel)]="prenom"/>
+<div *ngIf="register"> 
+    <app-adresse></app-adresse>
+</div>
 
+<h5>Composant formulaire</h5>
+<div>
+    <div>
+    Identifiant : 
+    <input [(ngModel)]="identifiant" (change)="verifyFields()"/>
+    </div> 
+    <div>
+    Mot de passe : 
+    <input type="password" [(ngModel)]="password" (change)="verifyFields()"/>  
+    </div>
+    <div>
+    Confirmation du mot de passe : 
+    <input type="password" [(ngModel)]="confirm_password" (change)="verifyFields()"/>  
+    </div>
+    <div>
+    <button [disabled]="!validForm" (click)="valider()">Enregistrer</button>
+    </div>
+</div>
 
-<app-adresse [prenom]="prenom"></app-adresse>
-<button [disabled]="!valid1" (click)="click()">Enregistrer</button>
+<div *ngIf="afficherRecapitulatif"> Récapitulatif  :
+    <app-recap></app-recap>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import '~bootstrap/dist/css/bootstrap.min.css';
+import { Client } from '../client';
 
 @Component({
   selector: 'app-formulaire',
@@ -8,15 +8,35 @@ import '~bootstrap/dist/css/bootstrap.min.css';
 })
 export class FormulaireComponent implements OnInit {
 
-  valid1 : boolean = false;
-  prenom : string = "toto";
+  validForm : boolean = false;
+  afficherRecapitulatif : boolean = false;
+  register : boolean = true;
+  identifiant : string = "toto";
+  password : string = "";
+  confirm_password : string = "";
+  client : Client = new Client;
 
   constructor() { }
 
-  click() {
-    console.log("click")
-  }
+ 
   ngOnInit(): void {
   }
 
+  verifyFields(){
+    if(this.identifiant != ""){
+      this.validForm = true;
+      this.client.identifiant = this.identifiant;
+    } else { this.validForm = false; }
+
+    if(this.password != "" && this.confirm_password != "" && this.password === this.confirm_password){
+      this.validForm = true;
+      this.client.password = this.password;
+    } else { this.validForm = false; }
+  }
+
+  valider() {
+    if(this.validForm){
+      this.afficherRecapitulatif = true;
+    }
+  }
 }
