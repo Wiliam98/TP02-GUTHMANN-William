@@ -13,5 +13,8 @@ export class RecapComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  hashPassword(password: string){
+    return "*".repeat(password.length)
+  }
 }

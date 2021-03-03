@@ -8,13 +8,13 @@ import { Client } from '../client';
 })
 export class AdresseComponent implements OnInit {
 
-  @Input () prenom : string = "Jean";
-  @Input () nom : string = "DUPONT";
-  @Input () adresse : string = "15 rue des lilas";
+  @Input () prenom : string = "";
+  @Input () nom : string = "";
+  @Input () adresse : string = "";
   @Input () postal : number = 0;
-  @Input () pays : string = "France";
-  @Input () phone : string = "06XXXXXXXX";
-  @Input () mail : string = "jeand.dupont@yahoo.fr";
+  @Input () pays : string = "";
+  @Input () phone : string = "";
+  @Input () mail : string = "";
   @Input () client : Client = new Client();
 
   
@@ -30,7 +30,7 @@ export class AdresseComponent implements OnInit {
     this.postal != 0 ? this.client.postal = this.postal : null;
     this.pays != "" ? this.client.pays = this.pays : null;
     this.phone != "" && this.phone.match("\[0-9]") ? this.client.phone = this.phone : null;
-    this.mail != "" && this.phone.includes("@") ? this.client.mail = this.mail : null;
+    this.mail != "" ? this.client.mail = this.mail : null;
   }
 
 }

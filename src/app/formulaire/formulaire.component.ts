@@ -11,7 +11,7 @@ export class FormulaireComponent implements OnInit {
   validForm : boolean = false;
   afficherRecapitulatif : boolean = false;
   register : boolean = true;
-  identifiant : string = "toto";
+  identifiant : string = "";
   password : string = "";
   confirm_password : string = "";
   client : Client = new Client();
